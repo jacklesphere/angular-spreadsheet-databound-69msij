@@ -1,0 +1,13 @@
+<Button (click)="changeCellData()">Change Cell Data</Button>
+<!-- <button (click)="checkFilters()" >Check</button> -->
+<ejs-spreadsheet #spreadSheetInstance (dataSourceChanged)="dataSourceChanged($event)" (cellEdit)="cellEdit($event)"
+  (cellSave)="cellSave($event)" (actionComplete)="actionComplete($event)" (actionBegin)="actionBegin($event)"
+  (dataBound)="dataBound()">
+  <e-sheets>
+    <e-sheet name="Work Orders">
+      <e-ranges>
+        <e-range [dataSource]="aSpreadSheetData"></e-range>
+      </e-ranges>
+    </e-sheet>
+  </e-sheets>
+</ejs-spreadsheet>
